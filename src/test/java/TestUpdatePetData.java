@@ -11,15 +11,15 @@ public class TestUpdatePetData {
     @Test
     @DisplayName("Update data of pet")
     @Description("Updating status of the pet to sold")
-    public void testUpdatePetStatus(){
+    public void testUpdatePetStatus() {
         Response createPet = steps.createNewPet();
         Response updatePet = steps.updatePet();
         steps.printResponseBodyToConsole(updatePet);
-        steps.checkStatus(updatePet,200, "sold");
+        steps.checkStatus(updatePet, 200, "sold");
     }
 
     @After
-    public void deletePet(){
+    public void deletePet() {
         Response deletePet = steps.deletePet("2");
     }
 }
